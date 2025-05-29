@@ -4,7 +4,7 @@ pipeline
  
  environment
  {
-   LANG:'en_US.UTF-8'
+   LANG='en_US.UTF-8'
    LC_ALL='en_US.UTF-8'
  }
  tools
@@ -26,14 +26,14 @@ pipeline
       sh 'mvn clean package'
     }
    }
-   stage('Archieve')
+   stage('Archive')
    {
     steps
     {
-      sh 'archieveArtifacts artifacts='target/*.war',fingerprint:true
+      sh 'archiveArtifacts artifacts='target/*.war',fingerprint:true
     }
    }
-   stage('Run Application')
+   stage('Deploy')
    {
      steps
      {
