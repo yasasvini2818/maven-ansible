@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/yasasvini2818/maven-ansible.git
+                git branch: 'master', url: 'https://github.com/yasasvini2818/maven-ansible.git'
 '
             }
         }
